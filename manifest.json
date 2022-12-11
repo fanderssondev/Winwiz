@@ -4,9 +4,9 @@
     "description": "Quick search for motorcycle VIN numbers",
     "version": "1.0.0",
     "icons": { "128": "./logos/WINwiz-128.png" },
-    "browser_action": {
+    "action": {
         "default_icon": "./logos/WINwiz-500.png",
-        "default_popup": "popup.html"
+        "default_popup": "index.html"
         },
     "permissions": ["activeTab"]
 }

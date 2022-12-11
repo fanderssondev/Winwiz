@@ -1,0 +1,11 @@
+{
+    "manifest_version": 2,
+    "name": "VINwiz",
+    "description": "Quick search for motorcycle VIN numbers",
+    "version": "1.0.0",
+    "icons": {
+        "browser_action": "",
+        "default_popup": ""
+    },
+    "permissions": ["sctiveTab"]
+}

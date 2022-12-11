@@ -1,11 +1,11 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "VINwiz",
     "description": "Quick search for motorcycle VIN numbers",
     "version": "1.0.0",
-    "icons": { "128": "./WINwiz-128x128.png" },
+    "icons": { "128": "./logos/WINwiz-128.png" },
     "browser_action": {
-        "default_icon": "./WINwiz-500x500.png",
+        "default_icon": "./logos/WINwiz-500.png",
         "default_popup": "popup.html"
         },
     "permissions": ["activeTab"]

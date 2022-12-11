@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WINwiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="modal-header">
+      <h1 class="logo">
+        <img
+          src="/logos/WINwiz-500x500.png"
+          alt="WINwiz logo"
+          class="logo-icon"
+        />
+        WINwiz
+        <span class="version">(1.0.0)</span>
+      </h1>
+    </div>
+    <div class="modal-content">
+      <p>Test paragraph</p>
+    </div>
+    <div class="flex-container">
+      <div class="flex">
+        <a href="https://example.com" target="_blank">
+          <img src="/logos/WINwiz-128x128.png" alt="" class="test-logo" />
+        </a>
+      </div>
+    </div>
+
+    <label for="brand">Select a brand:</label>
+    <select id="brand" name="brands">
+      <option value="">Select a brand</option>
+      <option value="honda">Honda</option>
+      <option value="yamaha">Yamaha</option>
+      <option value="ktm">KTM</option>
+    </select>
+
+    <form id="vin-form">
+      <label for="vin-number">VIN:</label>
+      <input type="text" id="vin-number" placeholder="Enter the VIN number" />
+      <input type="submit" value="Save" />
+    </form>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -8,41 +8,42 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="modal-header">
-      <h1 class="logo">
-        <img
-          src="/logos/WINwiz-500.png"
-          alt="WINwiz logo"
-          class="logo-icon"
-        />
-        WINwiz
-        <span class="version">(1.0.0)</span>
-      </h1>
-    </div>
-    <div class="modal-content">
-      <p>Test paragraph</p>
-    </div>
-    <div class="flex-container">
-      <div class="flex">
-        <a href="https://example.com" target="_blank">
-          <img src="/logos/WINwiz-128x128.png" alt="" class="test-logo" />
-        </a>
-      </div>
+    <div class="header">
+      <img src="/logos/WINwiz-128.png" alt="WINwiz logo" class="logo-icon" />
+      <span class="version">version (1.0.0)</span>
     </div>
 
-    <label for="brand">Select a brand:</label>
-    <select id="brand" name="brands">
-      <option value="">Select a brand</option>
-      <option value="honda">Honda</option>
-      <option value="yamaha">Yamaha</option>
-      <!-- <option value="ktm">KTM</option> -->
-    </select>
+    <div>
+      <label for="brand"></label>
+      <select id="brand" name="brands">
+        <option value="">Select a brand</option>
+        <option value="honda">Honda</option>
+        <option value="yamaha">Yamaha</option>
+        <!-- <option value="ktm">KTM</option> -->
+      </select>
+    </div>
 
-    <form id="vin-form">
-      <label for="vin-number">VIN:</label>
-      <input type="text" id="vin-number" placeholder="Enter the VIN number" />
-      <input type="submit" value="Save" />
-    </form>
+    <div>
+      <form id="vin-form">
+        <label for="vin-number"></label>
+        <input type="text" id="vin-number" placeholder="Enter the VIN number" />
+        <input type="submit" value="Search" />
+      </form>
+    </div>
+
+    <!-- Warns if VIN is not 17 digits (alpha numeric) -->
+    <div id="warning"></div>
+
+    <div class="card">
+      <img src="/logos/CB600FAB-Y211.jpg" width="100" height="100" alt="" />
+      <ul class="specs">
+        <li id="make">Honda</li>
+        <li id="model">CB 600 F HORNET ABS</li>
+        <li id="year">2011</li>
+        <li id="model-code">CB600FAB</li>
+      </ul>
+      <div id="go-to-site-link"></div>
+    </div>
 
     <script src="script.js"></script>
   </body>

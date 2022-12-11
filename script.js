@@ -1,18 +1,26 @@
 const brand = document.getElementById("brand");
 const vinform = document.getElementById("vin-form");
 const vinNumber = document.getElementById("vin-number");
-
+const warning = document.getElementById("warning");
+const siteLink = document.getElementById("go-to-site-link");
 
 // Get the VIN number
 vinform.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log(vinNumber.value);
-  searchVIN(brand, vinNumber);
+
+  vinNumber.value = vinNumber.value.trim();
+
+  if (vinNumber.value.length !== 17) {
+    warning.innerHTML = `The VIN number is ${vinNumber.value.length} digits long. Needs to be 17 digits`;
+  } else {
+    const URL = getURL(brand, vinNumber);
+    // searchVIN(URL);
+    siteLink.innerHTML = `<a href=${URL} target="_blank">Go to site</a>`;
+  }
 });
 
-// Search the site for the VIN
-function searchVIN(brand, vinNumber) {
-  const URL = getURL(brand, vinNumber);
+// Opens the target site
+function searchVIN(URL) {
   window.open(URL, "_blank");
 }
 
@@ -21,12 +29,10 @@ function getURL(brand, vinNumber) {
   let url = "";
   switch (brand.value) {
     case "honda":
-      url =
-        `https://www.bike-parts-honda.com/honda-motorcycle/search_vehicle/chassis/${vinNumber.value}+`;
+      url = `https://www.bike-parts-honda.com/honda-motorcycle/search_vehicle/chassis/${vinNumber.value}+`;
       break;
     case "yamaha":
-      url =
-        `https://www.bike-parts-yam.com/yamaha-motorcycle/search_vehicle/chassis/${vinNumber.value}+`;
+      url = `https://www.bike-parts-yam.com/yamaha-motorcycle/search_vehicle/chassis/${vinNumber.value}+`;
       break;
 
     default:

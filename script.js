@@ -34,6 +34,15 @@ function getURL(brand, vinNumber) {
     case "yamaha":
       url = `https://www.bike-parts-yam.com/yamaha-motorcycle/search_vehicle/chassis/${vinNumber.value}+`;
       break;
+    case "bmw":
+      url = `https://www.bike-parts-bmw.co.uk/bmw-motorcycle/search_vehicle/chassis/${vinNumber.value}`;
+      break;
+      case "kawasaki":
+        url = `https://www.bike-parts-kawa.com/kawasaki-motorcycle/search_vehicle/chassis/${vinNumber.value}`;
+        break;
+        case "ktm":
+        url = `https://www.bike-parts-ktm.com/ktm-motorcycle/search_vehicle/chassis/${vinNumber.value}`;
+        break;
 
     default:
       break;

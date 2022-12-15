@@ -1,6 +1,3 @@
-import * as cheerio from "cheerio";
-import * as request from "request";
-
 const brand = document.getElementById("brand");
 const vinform = document.getElementById("vin-form");
 const vinNumber = document.getElementById("vin-number");
@@ -8,7 +5,7 @@ const warning = document.getElementById("warning");
 const siteLink = document.getElementById("go-to-site-link");
 
 // Get the VIN number
-vinform.addEventListener("submit", (event) => {
+vinform.addEventListener("submit", event => {
   event.preventDefault();
 
   getHTML();
@@ -55,4 +52,6 @@ function getURL(brand, vinNumber) {
   return url;
 }
 
-function getHTML() {}
+function getHTML() {
+  
+}

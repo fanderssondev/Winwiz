@@ -1,3 +1,6 @@
+import * as cheerio from "cheerio";
+import * as request from "request";
+
 const brand = document.getElementById("brand");
 const vinform = document.getElementById("vin-form");
 const vinNumber = document.getElementById("vin-number");
@@ -52,23 +55,4 @@ function getURL(brand, vinNumber) {
   return url;
 }
 
-function getHTML() {
-  fetch("https://es.microfiches.net/")
-    .then((response) => {
-      console.log(response);
-      return response.text();
-    })
-    .then((html) => {
-      // Initialize the DOM parser
-      var parser = new DOMParser();
-
-      // Parse the text
-      var doc = parser.parseFromString(html, "text/html");
-
-      // You can now even select part of that html as you would in the regular DOM
-      // Example:
-      // var docArticle = doc.querySelector('article').innerHTML;
-
-      console.log(doc);
-    });
-}
+function getHTML() {}

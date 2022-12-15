@@ -1,0 +1,19 @@
+{
+  "name": "vin-chrome-ext",
+  "version": "1.0.0",
+  "description": "A Chrome extension that searches motorcycle VIN numbers",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nanobyter/Winwiz.git"
+  },
+  "author": "Fredrik Andersson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nanobyter/Winwiz/issues"
+  },
+  "homepage": "https://github.com/nanobyter/Winwiz#readme"
+}

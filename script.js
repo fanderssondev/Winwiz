@@ -8,6 +8,8 @@ const siteLink = document.getElementById("go-to-site-link");
 vinform.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  getHTML();
+
   vinNumber.value = vinNumber.value.trim();
 
   if (vinNumber.value.length !== 17) {
@@ -37,16 +39,36 @@ function getURL(brand, vinNumber) {
     case "bmw":
       url = `https://www.bike-parts-bmw.co.uk/bmw-motorcycle/search_vehicle/chassis/${vinNumber.value}`;
       break;
-      case "kawasaki":
-        url = `https://www.bike-parts-kawa.com/kawasaki-motorcycle/search_vehicle/chassis/${vinNumber.value}`;
-        break;
-        case "ktm":
-        url = `https://www.bike-parts-ktm.com/ktm-motorcycle/search_vehicle/chassis/${vinNumber.value}`;
-        break;
+    case "kawasaki":
+      url = `https://www.bike-parts-kawa.com/kawasaki-motorcycle/search_vehicle/chassis/${vinNumber.value}`;
+      break;
+    case "ktm":
+      url = `https://www.bike-parts-ktm.com/ktm-motorcycle/search_vehicle/chassis/${vinNumber.value}`;
+      break;
 
     default:
       break;
   }
-  console.log(url);
   return url;
+}
+
+function getHTML() {
+  fetch("https://es.microfiches.net/")
+    .then((response) => {
+      console.log(response);
+      return response.text();
+    })
+    .then((html) => {
+      // Initialize the DOM parser
+      var parser = new DOMParser();
+
+      // Parse the text
+      var doc = parser.parseFromString(html, "text/html");
+
+      // You can now even select part of that html as you would in the regular DOM
+      // Example:
+      // var docArticle = doc.querySelector('article').innerHTML;
+
+      console.log(doc);
+    });
 }

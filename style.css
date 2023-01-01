@@ -3,19 +3,26 @@
 }
 
 body {
-  /* width: 300px; */
+  margin: 0;
   height: 400px;
   background-color: rgb(250, 247, 247);
   font-size: 16px;
   font-style: serif, monospace;
 }
 
+.container {
+  width: 400px;
+  margin: 20px;
+}
+
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .version {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 #vin-number {
@@ -24,18 +31,24 @@ body {
 
 .card {
   padding: 10px;
-  margin: 20px;
-  width: 250px;
   border: 1px solid black;
-  display: flex;
+  border-radius: 4px;
 }
 
-img {
-    
+.vehicle-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .specs {
-  
-    list-style-type: none;
-    
+  flex: 1;
+  list-style-type: none;
+}
+
+.go-to-site-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }

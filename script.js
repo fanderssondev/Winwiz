@@ -7,7 +7,6 @@ const siteLink = document.getElementById("go-to-site-link");
 // Get the VIN number
 vinform.addEventListener("submit", event => {
   event.preventDefault();
-
   getHTML();
 
   vinNumber.value = vinNumber.value.trim();
@@ -52,6 +51,4 @@ function getURL(brand, vinNumber) {
   return url;
 }
 
-function getHTML() {
-  
-}
+function getHTML() {}
